@@ -3,71 +3,128 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp"
-    android:gravity="center_horizontal"
-    android:background="#FFFFFF">
-
-    <TextView
-        android:id="@+id/txtTema"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Redes"
-        android:textSize="20sp"
-        android:textStyle="bold" />
-    <TextView
-        android:id="@+id/textPregunta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:textSize="20sp" />
-
-    <Button
-        android:id="@+id/opcion1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Opción A" />
-
-    <Button
-        android:id="@+id/opcion2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Opción B" />
-
-    <Button
-        android:id="@+id/opcion3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Opción C" />
+>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:orientation="horizontal"
         android:background="#FFFFFF"
-        android:gravity="center_horizontal">
-        <Button
-            android:id="@+id/btnAnterior"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:minHeight="48dp"
-            android:minWidth="48dp"
-            android:background="#E92A1E"
-            android:enabled="false"
-            android:text="Anterior" />
-        <Button
-            android:id="@+id/btnSiguiente"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:minHeight="48dp"
-            android:minWidth="48dp"
-            android:layout_marginStart="30dp"
-            android:background="#58E45C"
-            android:enabled="false"
-            android:text="Siguiente" />
-    </LinearLayout>
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp">
 
-</LinearLayout>
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/back"
+            android:contentDescription="Atrás" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TeleQuiz"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#000000" />
+
+        <ImageView
+            android:id="@+id/btnStats"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/statistics"
+            android:contentDescription="Estadísticas" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="24dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:gravity="center_vertical"
+        android:baselineAligned="false">
+
+        <TextView
+            android:id="@+id/txtTema"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Microondas"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtPuntaje"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Puntaje\n0"
+            android:textSize="14sp"
+            android:textAlignment="center"
+            android:background="#E0E0E0"
+            android:padding="8dp" />
+    </LinearLayout>
+        <TextView
+            android:id="@+id/textPregunta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp"
+            android:text="Questionn"/>
+
+        <Button
+            android:id="@+id/opcion1"
+            android:layout_width="218dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            android:text="Opción A" />
+
+        <Button
+            android:id="@+id/opcion2"
+            android:layout_width="218dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:text="Opción B" />
+
+        <Button
+            android:id="@+id/opcion3"
+            android:layout_width="218dp"
+            android:layout_height="70dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:text="Opción C" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="50dp"
+            android:background="#FFFFFF"
+            android:gravity="center_horizontal">
+            <Button
+                android:id="@+id/btnAnterior"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:minHeight="48dp"
+                android:minWidth="48dp"
+                android:background="#E92A1E"
+                android:enabled="false"
+                android:text="Anterior" />
+            <Button
+                android:id="@+id/btnSiguiente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:minHeight="48dp"
+                android:minWidth="48dp"
+                android:layout_marginStart="40dp"
+                android:background="#58E45C"
+                android:enabled="false"
+                android:text="Siguiente" />
+        </LinearLayout>
+    </LinearLayout>

@@ -30,6 +30,9 @@ public class QuizActivity extends AppCompatActivity {
     long tiempoInicio;
 
     String correctaActual = "";
+    //View pa mostrar puntaje
+    TextView txtPuntaje;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +56,9 @@ public class QuizActivity extends AppCompatActivity {
                 cargarPreguntasMicroondas();
                 break;
         }
+        //Mostramos puntaje inicial 0
+        txtPuntaje = findViewById(R.id.txtPuntaje);
+        txtPuntaje.setText("Puntaje\n" + puntaje);
 
         //Asigno variables en java para todos los botones :D y texto
         textPregunta = findViewById(R.id.textPregunta);
@@ -177,9 +183,13 @@ public class QuizActivity extends AppCompatActivity {
         if (textoSelec.equals(correctaActual)) {
             botonSeleccionado.setBackgroundColor(Color.GREEN);
             puntaje += 2;
+            txtPuntaje.setText("Puntaje\n" + puntaje);
+
         } else {
             botonSeleccionado.setBackgroundColor(Color.RED);
             puntaje -= 2;
+            txtPuntaje.setText("Puntaje\n" + puntaje);
+
         }
 
         //Habilito todos los botones owo
